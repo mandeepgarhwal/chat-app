@@ -13,7 +13,7 @@ const publicDir = path.join(process.cwd(), 'public');
 
 app.use(clerkMiddleware())
 app.use(express.json())
-app.use(cors(origin= FRONTEND_URL, credentials = true))
+app.use(cors({origin : FRONTEND_URL, credentials : true}))
 // console.log("DB_URL =" + process.env.DB_URL);
 
 app.get("/health", (req, res)=> {
